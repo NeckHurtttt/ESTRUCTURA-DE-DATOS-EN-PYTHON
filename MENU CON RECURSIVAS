@@ -14,24 +14,26 @@ def potencia(base, exponente):
         return 1
     else:
         return base * potencia(base, exponente - 1)
-print("MENU")
-print("1. FACTORIAL")
-print("2. CUENTA ATRAS")
-print("3. POTENCIACION")
-print("0. SALIR")
-opcion = int(input("INGRESE LA OPCION: "))
-if opcion == 1:
-    numero = int(input("INGRESE EL NUMERO: "))
-    print("FACTORIAL:", factorial(numero))
-elif opcion == 2:
-    numero = int(input("INGRESE EL NUMERO: "))
-    print("CUENTA ATRAS:")
-    cuenta_atras(numero)
-elif opcion == 3:
-    base = int(input("INGRESE LA BASE: "))
-    exponente = int(input("INGRESE EL EXPONENTE: "))
-    print("POTENCIA:", potencia(base, exponente))
-elif opcion == 0:
-    print("EL PROGRAMA CERRO CORRECTAMENTE")
-else:
-    print("OPCION INVALIDA")
+opcion = -1
+while opcion != 0:
+    print("\nMENU")
+    print("1. FACTORIAL")
+    print("2. CUENTA ATRAS")
+    print("3. POTENCIACION")
+    print("0. SALIR")
+    opcion = int(input("INGRESE LA OPCION: "))
+    if opcion == 1:
+        numero = int(input("INGRESE EL NUMERO: "))
+        print("FACTORIAL:", factorial(numero))
+    elif opcion == 2:
+        numero = int(input("INGRESE EL NUMERO: "))
+        print("CUENTA ATRAS:")
+        cuenta_atras(numero)
+    elif opcion == 3:
+        base = int(input("INGRESE LA BASE: "))
+        exponente = int(input("INGRESE EL EXPONENTE: "))
+        print("POTENCIA:", potencia(base, exponente))
+    elif opcion == 0:
+        print("EL PROGRAMA CERRO CORRECTAMENTE")
+    else:
+        print("OPCION INVALIDA")
