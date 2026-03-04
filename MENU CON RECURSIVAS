@@ -1,0 +1,37 @@
+def factorial(numero):
+    if numero == 0 or numero == 1:
+        return 1
+    else:
+        return numero * factorial(numero - 1)
+def cuenta_atras(numero):
+    if numero == 0:
+        print(0)
+    else:
+        print(numero)
+        cuenta_atras(numero - 1)
+def potencia(base, exponente):
+    if exponente == 0:
+        return 1
+    else:
+        return base * potencia(base, exponente - 1)
+print("MENU")
+print("1. FACTORIAL")
+print("2. CUENTA ATRAS")
+print("3. POTENCIACION")
+print("0. SALIR")
+opcion = int(input("INGRESE LA OPCION: "))
+if opcion == 1:
+    numero = int(input("INGRESE EL NUMERO: "))
+    print("FACTORIAL:", factorial(numero))
+elif opcion == 2:
+    numero = int(input("INGRESE EL NUMERO: "))
+    print("CUENTA ATRAS:")
+    cuenta_atras(numero)
+elif opcion == 3:
+    base = int(input("INGRESE LA BASE: "))
+    exponente = int(input("INGRESE EL EXPONENTE: "))
+    print("POTENCIA:", potencia(base, exponente))
+elif opcion == 0:
+    print("EL PROGRAMA CERRO CORRECTAMENTE")
+else:
+    print("OPCION INVALIDA")
